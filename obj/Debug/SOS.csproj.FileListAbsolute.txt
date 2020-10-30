@@ -1,0 +1,14 @@
+C:\Users\mathe\source\repos\SOS\SOS\bin\Debug\SOS.exe.config
+C:\Users\mathe\source\repos\SOS\SOS\bin\Debug\SOS.exe
+C:\Users\mathe\source\repos\SOS\SOS\bin\Debug\SOS.pdb
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.csprojAssemblyReference.cache
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.telaLogin.resources
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.Properties.Resources.resources
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.csproj.GenerateResource.cache
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.csproj.CoreCompileInputs.cache
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.exe
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.pdb
+C:\Users\mathe\source\repos\SOS\SOS\obj\Debug\SOS.TelaCadastro.resources
+C:\Users\User\Downloads\SOS\SOS\SOS\obj\Debug\SOS.csprojAssemblyReference.cache
+C:\Users\User\Downloads\SOS\SOS\SOS\obj\Debug\SOS.exe
+C:\Users\User\Downloads\SOS\SOS\SOS\obj\Debug\SOS.pdb
