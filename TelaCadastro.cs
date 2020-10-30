@@ -15,7 +15,7 @@ namespace SOS
     {
 
         SqlConnection conexao;
-        SqlCommand commando;
+        SqlCommand comando;
         SqlDataAdapter da;
         SqlDataReader dr;
 
@@ -63,15 +63,15 @@ namespace SOS
                 
                 strSQL = "INSERT INTO usuario(nome, senha, email) VALUES (@usuario, @senha, @email)";
 
-                commando = new SqlCommand(strSQL, conexao);
+                comando = new SqlCommand(strSQL, conexao);
 
-                commando.Parameters.AddWithValue("@usuario", usuarioCadastro.Text);
-                commando.Parameters.AddWithValue("@senha", senhaCadastro.Text);
-                commando.Parameters.AddWithValue("@email", emailCadastro.Text);
+                comando.Parameters.AddWithValue("@usuario", usuarioCadastro.Text);
+                comando.Parameters.AddWithValue("@senha", senhaCadastro.Text);
+                comando.Parameters.AddWithValue("@email", emailCadastro.Text);
 
 
                 conexao.Open();
-                commando.ExecuteNonQuery(); 
+                comando.ExecuteNonQuery(); 
                 
             }
             catch(Exception ex) {
@@ -83,9 +83,8 @@ namespace SOS
             finally {
 
                 conexao.Close();
-                commando.Clone();
                 conexao = null;
-                commando = null;
+                comando = null;
 
             }
         }
