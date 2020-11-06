@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conta.Designer.cs">
+      <DependentUpon>Conta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrocarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrocarSenha.Designer.cs">
+      <DependentUpon>TrocarSenha.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Conta.resx">
+      <DependentUpon>Conta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaCadastro.resx">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TrocarSenha.resx">
+      <DependentUpon>TrocarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

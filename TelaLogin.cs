@@ -22,7 +22,10 @@ namespace SOS
 
         private void entrarLogin_Click(object sender, EventArgs e)
         {
-
+            Home fazerLogin = new Home();
+            this.Hide();
+            fazerLogin.Show();
+            
         }
 
         private void SOS_Load(object sender, EventArgs e)
