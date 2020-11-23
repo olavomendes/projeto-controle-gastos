@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace SOS
 {
@@ -61,23 +62,23 @@ namespace SOS
 
                 // CRIA A CONEXÃO COM O BANCO. LEMBRE-SE DE SUBSTITUIR OS CAMPOS PELOS DADOS
                 // DO SEU BANCO LOCAL
-                conexao = new SqlConnection("Server=endereco;Database=database;Uid=usuario;Pwd=senha");
+                //conexao = new SqlConnection("Server=localhost;Database=teste;Uid=root;Pwd=root;");
 
-                // QUERO PARA INSERIR OS DADOS NO BD LOCAL
-                strSQL = "INSERT INTO usuario(nome, senha, email) VALUES (@usuario, @senha, @email)";
-
-                // COMANDO DA CONEXÃO
-                comando = new SqlCommand(strSQL, conexao);
-
-                // CAPTURA OS DADOS DIGITADOS PELO USUÁRIO
-                comando.Parameters.AddWithValue("@usuario", usuarioCadastro.Text);
-                comando.Parameters.AddWithValue("@senha", senhaCadastro.Text);
-                comando.Parameters.AddWithValue("@email", emailCadastro.Text);
-
-                // ABRE A CONEXÃO
+                MySqlConnection conexao = new MySqlConnection("server=localhost;port=3306;User Id=root;database=teste;password=root");
                 conexao.Open();
-                // EXECUTA A QUERY
-                comando.ExecuteNonQuery(); 
+
+                //MessageBox.Show("Conectado");
+
+                MySqlCommand comando = new MySqlCommand("INSERT INTO usuario (usuario, senha, email) VALUES (?, ?, ?)", conexao);
+
+                comando.Parameters.Add("@usuario", MySqlDbType.VarChar, 45).Value = usuarioCadastroCampo.Text;
+                comando.Parameters.Add("@senha", MySqlDbType.VarChar, 45).Value = senhaCadastroCampo.Text;
+                comando.Parameters.Add("@email", MySqlDbType.VarChar, 45).Value = emailCadastroCampo.Text;
+
+                comando.ExecuteNonQuery();
+
+                conexao.Close();
+
                 
             }
             // CAPTURA O ERRO, CASO AJA
@@ -90,9 +91,9 @@ namespace SOS
             // APÓS A EXECUÇÃO, FECHA A CONEXÃO E REDEFINE OS VALORES
             finally {
 
-                conexao.Close();
-                conexao = null;
-                comando = null;
+                //conexao.Close();
+                //conexao = null;
+                //comando = null;
 
             }
         }
