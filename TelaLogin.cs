@@ -27,6 +27,8 @@ namespace SOS
             //this.Hide();
             //fazerLogin.Show();
 
+            // comentário de teste
+
             MySqlConnection conexao = new MySqlConnection("server=localhost;port=3306;User Id=root;database=teste;password=root");
 
             var comando = conexao.CreateCommand();
