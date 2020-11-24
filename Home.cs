@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SOS
 {
@@ -43,10 +44,10 @@ namespace SOS
             entrarAnalise.Show();
         }
 
-        private void entrarDespesa_Click(object sender, EventArgs e)
+        private void entrarDespesa_Click(object sender, EventArgs e) 
         {
-            Despesas entrarDespesas = new Despesas();
-            entrarDespesas.Show();
+            Despesas entrarDespesa = new Despesas();
+            entrarDespesa.Show();
         }
     }
 }
